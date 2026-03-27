@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="ru" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Усачев Недвижимость | Архитектура Капитала</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<!-- Подключение ультрасовременной пары Satoshi (гротеск) + Instrument Serif (антиква) -->
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+<script>
+if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+document.documentElement.classList.add('dark');
+} else {
+document.documentElement.classList.remove('dark')
+}
+</script>
+
+<script>
+tailwind.config = {
+darkMode: 'class', 
+theme: {
+extend: {
+colors: {
+black: '#030303',
+coal: '#0b0b0d',
+platinum: '#e5e7eb',
+gold: {
+DEFAULT: '#C1A063',
+muted: '#9a7f4c'
+}
+},
+fontFamily: {
+sans: ['Satoshi', 'sans-serif'],
+serif: ['"Instrument Serif"', 'serif'],
+}
+}
+}
+}
+</script>
+
+<style>
+body {
+-webkit-font-smoothing: antialiased;
+}
+.gold-text {
+background: linear-gradient(135deg, #C1A063 0%, #9a7f4c 100%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+input:focus { outline: none; border-color: #C1A063; }
+input::placeholder { text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.75rem;}
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: #030303; }
+.dark ::webkit-scrollbar-track { background: #030303; }
+body:not(.dark) ::webkit-scrollbar-track { background: #f3f4f6; }
+::-webkit-scrollbar-thumb { background: #C1A063; }
+
+.video-slide {
+transition: opacity 1.5s ease-in-out;
+opacity: 0;
+z-index: 0;
+}
+.video-slide.active {
+opacity: 1; 
+z-index: 1;
+}
+
+/* Скрытие скроллбара для горизонтальной карусели на мобильных */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+</style>
+</head>
+
+<body class="bg-white text-black dark:bg-black dark:text-platinum overflow-x-hidden selection:bg-gold selection:text-black transition-colors duration-300">
+
+<section class="relative h-screen flex flex-col justify-center items-center text-center px-4 overflow-hidden bg-black">
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-gradient-to-b from-black/90 via-black/50 to-black/95 z-10"></div>
+<video class="video-slide active absolute inset-0 w-full h-full object-cover" autoplay muted loop playsinline>
+<source src="video-1.mp4" type="video/mp4">
+</video>
+<video class="video-slide absolute inset-0 w-full h-full object-cover" autoplay muted loop playsinline>
+<source src="video-2.mp4" type="video/mp4">
+</video>
+<video class="video-slide absolute inset-0 w-full h-full object-cover" autoplay muted loop playsinline>
+<source src="video-3.mp4" type="video/mp4">
+</video>
+</div>
+
+<div class="z-20 max-w-5xl w-full">
+<h1 class="text-5xl md:text-7xl lg:text-8xl font-serif tracking-wide leading-tight mb-8 text-platinum drop-shadow-lg" data-aos="fade-up" data-aos-duration="1500">
+Агентство Усачёвъ<br>
+Недвижимость как актив.<br>
+<span class="gold-text font-serif italic mt-6 block drop-shadow-none">С доверием. Без шума.</span>
+</h1>
+<p class="text-sm md:text-base text-gray-300 font-sans font-light leading-relaxed max-w-3xl mx-auto mb-12" data-aos="fade-up" data-aos-delay="300">
+Мы выстроили работу так, чтобы вы могли продавать и покупать активы без лишнего шума и суеты. Сопровождаем сделки в сегментах Premium и De Luxe, где важны не метры -- а безопасность, стратегия и результат.
+</p>
+
+<div data-aos="fade-up" data-aos-delay="500" class="mt-8 flex flex-col items-center">
+<a href="#cta" class="px-12 py-5 border border-gold/50 text-platinum uppercase tracking-[0.2em] text-xs font-sans font-medium hover:bg-gold hover:text-black hover:border-gold transition-all duration-700 backdrop-blur-sm">
+Получить экспертную оценку
+</a>
+<p class="mt-6 text-[9px] md:text-[10px] font-sans tracking-[0.2em] text-gray-400 uppercase text-center max-w-md">
+Без обязательств &bull; Конфиденциально &bull;<br> Ответ в течение 24 часов.<br>Мы свяжемся с вами лично и обсудим задачу
+</p>
+</div>
+</div>
+</section>
+
+<!-- Отступы изменены: py-16 для мобильных, md:py-24 для десктопа -->
+<section class="py-16 md:py-24 bg-neutral-100 dark:bg-coal border-y border-neutral-200 dark:border-white/5 transition-colors duration-300">
+<div class="max-w-7xl mx-auto px-4">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-y-16 gap-x-8 text-center mb-16 md:mb-24">
+<div data-aos="fade-up">
+<p class="text-4xl md:text-6xl font-serif gold-text mb-4">>2700</p>
+<p class="text-[10px] md:text-xs font-sans uppercase tracking-[0.2em] text-neutral-600 dark:text-gray-400 font-light">проверенных покупателей</p>
+</div>
+<div data-aos="fade-up" data-aos-delay="100">
+<p class="text-4xl md:text-6xl font-serif gold-text mb-4">700+</p>
+<p class="text-[10px] md:text-xs font-sans uppercase tracking-[0.2em] text-neutral-600 dark:text-gray-400 font-light">контактов собственников в базе</p>
+</div>
+<div data-aos="fade-up" data-aos-delay="200">
+<p class="text-4xl md:text-6xl font-serif gold-text mb-4">5 дней</p>
+<p class="text-[10px] md:text-xs font-sans uppercase tracking-[0.2em] text-neutral-600 dark:text-gray-400 font-light">средний срок сделки</p>
+</div>
+<div data-aos="fade-up" data-aos-delay="300">
+<p class="text-4xl md:text-6xl font-serif gold-text mb-4">5</p>
+<p class="text-[10px] md:text-xs font-sans uppercase tracking-[0.2em] text-neutral-600 dark:text-gray-400 font-light">отделов продаж</p>
+</div>
+</div>
+
+<div class="max-w-3xl mx-auto text-center border-t border-neutral-200 dark:border-white/10 pt-16" data-aos="fade-up">
+<h3 class="text-3xl md:text-5xl font-serif tracking-wide mb-6">Решения принимаются один раз.<br><span class="gold-text font-serif italic">Ошибка стоит дорого.</span></h3>
+<p class="text-sm font-sans text-neutral-600 dark:text-gray-400 font-light mb-10">Оставьте заявку и получите стратегию по вашему объекту.</p>
+<a href="#cta" class="inline-block px-10 py-4 border border-gold/50 text-black dark:text-platinum uppercase tracking-[0.2em] text-xs font-sans font-medium hover:bg-gold hover:text-black transition-all duration-700">
+Получить экспертную оценку актива
+</a>
+</div>
+</div>
+</section>
+
+<!-- Отступы изменены: py-20 md:py-40 -->
+<section class="py-20 md:py-40 flex justify-center items-center text-center px-4 relative bg-cover bg-center" style="background-image: url('img-pen.jpg');">
+<div class="absolute inset-0 bg-black/60 dark:bg-black/70 z-0 transition-colors duration-300"></div>
+<div class="absolute top-0 left-1/2 -translate-x-1/2 w-px h-24 bg-gradient-to-b from-gold/50 to-transparent z-10"></div>
+<div class="max-w-4xl mx-auto z-10 relative" data-aos="zoom-in">
+<h2 class="text-5xl md:text-7xl lg:text-8xl font-serif leading-tight tracking-wide mb-8 text-platinum">
+Мы работаем не с объектами.<br>
+<span class="gold-text font-serif italic mt-2 block">Мы работаем с капиталом.</span>
+</h2>
+<p class="text-sm md:text-base font-sans text-gray-300 font-light leading-relaxed mb-12 max-w-2xl mx-auto">
+Комплексное сопровождение по стандарту Family Office. Мы берем на себя абсолютно всё: от подбора правильной локации и аудита до налогов, ремонта и юридической чистоты. Вы не тратите время и нервы. Вы получаете результат.
+</p>
+<a href="#cta" class="inline-block px-10 py-4 border border-gold/50 text-platinum uppercase tracking-[0.2em] text-xs font-sans font-medium hover:bg-gold hover:text-black hover:border-gold transition-all duration-700 backdrop-blur-sm">
+Обсудить вашу задачу
+</a>
+</div>
+</section>
+
+<!-- Отступы изменены: py-16 md:py-32. Внедрена Native CSS Scroll Snap карусель для мобильных -->
+<section class="py-16 md:py-32 bg-neutral-50 dark:bg-coal px-4 transition-colors duration-300">
+<div class="max-w-7xl mx-auto">
+<h3 class="text-xs font-sans uppercase tracking-[0.4em] text-gold/70 mb-12 md:mb-20 text-center font-medium">Управление полным циклом</h3>
+<div class="flex overflow-x-auto snap-x snap-mandatory gap-4 pb-6 md:grid md:grid-cols-2 lg:grid-cols-5 md:gap-6 md:pb-0 hide-scrollbar" data-aos="fade-up">
+
+<div class="relative h-[400px] min-w-[85vw] md:min-w-0 snap-center border border-neutral-200 dark:border-white/10 hover:border-gold/50 transition-all duration-700 group overflow-hidden flex flex-col justify-end p-6 bg-white dark:bg-black/30">
+<img src="img-flipping.jpg" alt="Флиппинг" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-105 transition-all duration-1000">
+<div class="absolute inset-0 bg-gradient-to-t from-white dark:from-black via-white/50 dark:via-black/60 to-transparent"></div>
+<div class="relative z-10 font-sans">
+<h4 class="text-sm font-medium uppercase tracking-widest text-black dark:text-platinum group-hover:text-gold mb-4 transition-colors">Премиальные ремонты</h4>
+<p class="text-xs text-neutral-600 dark:text-gray-400 leading-relaxed">Реализация премиального ремонта под ключ собственной командой.</p>
+</div>
+</div>
+
+<div class="relative h-[400px] min-w-[85vw] md:min-w-0 snap-center border border-neutral-200 dark:border-white/10 hover:border-gold/50 transition-all duration-700 group overflow-hidden flex flex-col justify-end p-6 bg-white dark:bg-black/30">
+<img src="img-commerce.jpg" alt="Коммерция" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-105 transition-all duration-1000">
+<div class="absolute inset-0 bg-gradient-to-t from-white dark:from-black via-white/50 dark:via-black/60 to-transparent"></div>
+<div class="relative z-10 font-sans">
+<h4 class="text-sm font-medium uppercase tracking-widest text-black dark:text-platinum group-hover:text-gold mb-4 transition-colors">Коммерция</h4>
+<p class="text-xs text-neutral-600 dark:text-gray-400 leading-relaxed">Портфели и инвестиции в стрит-ритейл.</p>
+</div>
+</div>
+
+<div class="relative h-[400px] min-w-[85vw] md:min-w-0 snap-center border border-neutral-200 dark:border-white/10 hover:border-gold/50 transition-all duration-700 group overflow-hidden flex flex-col justify-end p-6 bg-white dark:bg-black/30">
+<img src="img-trophy.jpg" alt="Трофейные активы" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-105 transition-all duration-1000">
+<div class="absolute inset-0 bg-gradient-to-t from-white dark:from-black via-white/50 dark:via-black/60 to-transparent"></div>
+<div class="relative z-10 font-sans">
+<h4 class="text-sm font-medium uppercase tracking-widest text-black dark:text-platinum group-hover:text-gold mb-4 transition-colors">Трофейные активы</h4>
+<p class="text-xs text-neutral-600 dark:text-gray-400 leading-relaxed">Подбор штучных лотов вне рынка.</p>
+</div>
+</div>
+
+<div class="relative h-[400px] min-w-[85vw] md:min-w-0 snap-center border border-neutral-200 dark:border-white/10 hover:border-gold/50 transition-all duration-700 group overflow-hidden flex flex-col justify-end p-6 bg-white dark:bg-black/30">
+<img src="img-secondary.jpg" alt="Вторичный рынок" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-105 transition-all duration-1000">
+<div class="absolute inset-0 bg-gradient-to-t from-white dark:from-black via-white/50 dark:via-black/60 to-transparent"></div>
+<div class="relative z-10 font-sans">
+<h4 class="text-sm font-medium uppercase tracking-widest text-black dark:text-platinum group-hover:text-gold mb-4 transition-colors">Вторичный рынок</h4>
+<p class="text-xs text-neutral-600 dark:text-gray-400 leading-relaxed">Аудит, прозрачность и снятие рисков.</p>
+</div>
+</div>
+
+<div class="relative h-[400px] min-w-[85vw] md:min-w-0 snap-center border border-neutral-200 dark:border-white/10 hover:border-gold/50 transition-all duration-700 group overflow-hidden flex flex-col justify-end p-6 bg-white dark:bg-black/30">
+<img src="img-newbuilds.jpg" alt="Новостройки" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-105 transition-all duration-1000">
+<div class="absolute inset-0 bg-gradient-to-t from-white dark:from-black via-white/50 dark:via-black/60 to-transparent"></div>
+<div class="relative z-10 font-sans">
+<h4 class="text-sm font-medium uppercase tracking-widest text-black dark:text-platinum group-hover:text-gold mb-4 transition-colors">Новостройки</h4>
+<p class="text-xs text-neutral-600 dark:text-gray-400 leading-relaxed">Локации с потенциалом роста капитала.</p>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- Отступы изменены: py-16 md:py-32 -->
+<section class="py-16 md:py-32 bg-white dark:bg-black px-4 relative transition-colors duration-300">
+<div class="max-w-6xl mx-auto mb-16 md:mb-24">
+<h3 class="text-xs font-sans uppercase tracking-[0.4em] text-gold/70 mb-12 md:mb-20 text-center font-medium">Инфраструктура сделки</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12 text-black dark:text-platinum font-sans">
+<div data-aos="fade-right">
+<h4 class="text-xl font-light uppercase tracking-widest mb-4">Единая точка входа</h4>
+<p class="text-sm text-neutral-600 dark:text-gray-500 font-light">Один партнер вместо десятков агентов. Личный эксперт несет полную ответственность.</p>
+</div>
+<div data-aos="fade-left">
+<h4 class="text-xl font-light uppercase tracking-widest mb-4">Защита капитала</h4>
+<p class="text-sm text-neutral-600 dark:text-gray-500 font-light">Реализация по максимальной стоимости без компромиссов.</p>
+</div>
+<div data-aos="fade-right">
+<h4 class="text-xl font-light uppercase tracking-widest mb-4">Встречный трафик</h4>
+<p class="text-sm text-neutral-600 dark:text-gray-500 font-light">Комьюнити реальных покупателей и собственников для быстрых сделок.</p>
+</div>
+<div data-aos="fade-left">
+<h4 class="text-xl font-light uppercase tracking-widest mb-4">Конфиденциальность</h4>
+<p class="text-sm text-neutral-600 dark:text-gray-500 font-light">Строгая тайна сделки. Отсутствует риск утечки информации.</p>
+</div>
+</div>
+</div>
+
+<div class="max-w-3xl mx-auto text-center border-t border-neutral-200 dark:border-white/10 pt-16" data-aos="fade-up">
+<h3 class="text-4xl md:text-5xl font-serif tracking-wide mb-6 text-black dark:text-platinum">Вы нашли того,<br><span class="gold-text font-serif italic">кто отвечает за результат.</span></h3>
+<a href="#cta" class="inline-block mt-8 px-10 py-4 border border-gold/50 text-black dark:text-platinum uppercase tracking-[0.2em] text-xs font-sans font-medium hover:bg-gold hover:text-black transition-all duration-700">
+Получить консультацию
+</a>
+</div>
+</section>
+
+<!-- Отступы изменены: py-20 md:py-40 -->
+<section class="py-20 md:py-40 bg-neutral-100 dark:bg-coal px-4 relative transition-colors duration-300">
+<div class="max-w-7xl mx-auto">
+<h2 class="text-4xl md:text-6xl lg:text-7xl font-serif leading-tight tracking-wide mb-16 md:mb-20 text-center text-black dark:text-platinum" data-aos="fade-up">
+Мы не размещаем --<br>
+<span class="gold-text font-serif italic mt-4 block">мы позиционируем.</span>
+</h2>
+
+<div class="flex flex-col lg:flex-row gap-16 items-center">
+<div class="w-full lg:w-1/2 grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-12 text-black dark:text-platinum font-sans">
+<div data-aos="fade-right">
+<h4 class="text-lg font-light uppercase tracking-widest mb-4">Эстетика кадра</h4>
+<p class="text-sm text-neutral-600 dark:text-gray-500 leading-relaxed">Архитектурная съемка и кинематографичные видео.</p>
+</div>
+<div data-aos="fade-right" data-aos-delay="100">
+<h4 class="text-lg font-light uppercase tracking-widest mb-4">Диалог с капиталом</h4>
+<p class="text-sm text-neutral-600 dark:text-gray-500 leading-relaxed">Презентации через закрытые рассылки Private Banking.</p>
+</div>
+<div data-aos="fade-right" data-aos-delay="200">
+<h4 class="text-lg font-light uppercase tracking-widest mb-4">Международный уровень</h4>
+<p class="text-sm text-neutral-600 dark:text-gray-500 leading-relaxed">Прямой диалог с зарубежными инвесторами.</p>
+</div>
+<div data-aos="fade-right" data-aos-delay="300">
+<h4 class="text-lg font-light uppercase tracking-widest mb-4">Тизерный формат</h4>
+<p class="text-sm text-neutral-600 dark:text-gray-500 leading-relaxed">Деликатный выход на порталы с сохранением приватности.</p>
+</div>
+</div>
+<div class="w-full lg:w-1/2 grid grid-cols-2 gap-4">
+<img src="img-kitchen.jpg" alt="Маркетинг 1" class="w-full h-full object-cover transition-all duration-700 hover:scale-[1.02] shadow-lg" data-aos="fade-left">
+<img src="img-balcony.jpg" alt="Маркетинг 2" class="w-full h-full object-cover transition-all duration-700 hover:scale-[1.02] shadow-lg mt-12" data-aos="fade-left" data-aos-delay="200">
+</div>
+</div>
+</div>
+</section>
+
+<!-- Отступы изменены: py-16 md:py-32. Исправлен баг grayscale на мобильных -->
+<section class="py-16 md:py-32 bg-white dark:bg-black px-4 transition-colors duration-300">
+<div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-16">
+<div class="w-full md:w-5/12" data-aos="fade-right">
+<div class="aspect-[3/4] bg-neutral-100 dark:bg-coal relative overflow-hidden transition-colors duration-300">
+<img src="img-founder.jpg" alt="Вера Волкова" class="w-full h-full object-cover grayscale-0 md:grayscale opacity-100 md:opacity-90 hover:grayscale-0 hover:opacity-100 transition-all duration-700 shadow-xl">
+<div class="absolute inset-0 border border-black/5 dark:border-white/10 m-4 pointer-events-none"></div>
+</div>
+</div>
+
+<div class="w-full md:w-7/12 text-black dark:text-platinum">
+<h3 class="text-xs font-sans uppercase tracking-[0.4em] text-gold/70 mb-4 font-medium">Гарант сделки</h3>
+<h2 class="text-5xl md:text-6xl font-serif tracking-wide mb-4">Вера Волкова</h2>
+<p class="text-sm font-sans tracking-[0.2em] text-neutral-600 dark:text-gray-400 uppercase mb-10">Основатель. Практик.</p>
+<div class="w-12 h-px bg-gold mb-10"></div>
+<p class="text-2xl md:text-3xl font-serif leading-relaxed italic mb-10 text-neutral-800 dark:text-platinum">
+«Недвижимость -- это не про метры. Это про ответственность за чужие деньги и абсолютное доверие.»
+</p>
+<p class="text-sm font-sans text-neutral-600 dark:text-gray-500 leading-relaxed mb-10">
+Более 20 лет практической работы. Масштабный опыт на государственном уровне служит фундаментом безопасности каждой сделки.
+</p>
+<a href="#cta" class="inline-block px-10 py-4 border border-gold/50 text-black dark:text-platinum uppercase tracking-[0.2em] text-xs font-sans font-medium hover:bg-gold hover:text-black transition-all duration-700">
+Связаться с экспертом
+</a>
+</div>
+</div>
+</section>
+
+<!-- Отступы изменены: py-16 md:py-32. Исправлен баг grayscale на мобильных -->
+<section class="py-16 md:py-32 border-y border-neutral-200 dark:border-white/5 px-4 text-center relative bg-cover bg-center" style="background-image: url('bg-titanium.jpg');">
+<div class="absolute inset-0 bg-white/70 dark:bg-black/75 z-0 transition-colors duration-300"></div>
+<div class="max-w-6xl mx-auto relative z-10" data-aos="fade-up">
+<h2 class="text-4xl md:text-6xl font-serif tracking-wide mb-6 text-black dark:text-platinum text-center">Команда, которая делает результат</h2>
+<p class="text-sm md:text-base font-sans text-neutral-600 dark:text-gray-400 leading-relaxed mb-12 text-center">
+За вашим личным брокером стоит ресурс всей компании.
+</p>
+
+<!-- НОВЫЙ БЛОК: Широкоформатное фото команды -->
+<div class="w-full h-[250px] md:h-[450px] mb-12 md:mb-16 relative overflow-hidden bg-neutral-100 dark:bg-coal transition-colors duration-300">
+<img src="img-team.jpg" alt="Команда Усачев Недвижимость" class="w-full h-full object-cover grayscale-0 md:grayscale opacity-100 md:opacity-90 hover:grayscale-0 hover:opacity-100 transition-all duration-700">
+<div class="absolute inset-0 border border-black/5 dark:border-white/10 m-4 pointer-events-none"></div>
+</div>
+
+<!-- Сетка отделов -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-left text-black dark:text-platinum font-sans">
+<div class="p-8 border border-neutral-200 dark:border-white/10 bg-white/50 dark:bg-black/40 backdrop-blur-sm">
+<h4 class="text-sm font-medium uppercase tracking-widest text-gold mb-4">Комплаенс-отдел</h4>
+<p class="text-xs text-neutral-600 dark:text-gray-500 leading-relaxed">Аудит объектов по стандартам современного строго контроля.</p>
+</div>
+<div class="p-8 border border-neutral-200 dark:border-white/10 bg-white/50 dark:bg-black/40 backdrop-blur-sm">
+<h4 class="text-sm font-medium uppercase tracking-widest text-gold mb-4">Архитекторы эстетики</h4>
+<p class="text-xs text-neutral-600 dark:text-gray-500 leading-relaxed">Собственная команда дизайнеров и строителей.</p>
+</div>
+<div class="p-8 border border-neutral-200 dark:border-white/10 bg-white/50 dark:bg-black/40 backdrop-blur-sm">
+<h4 class="text-sm font-medium uppercase tracking-widest text-gold mb-4">Синергия</h4>
+<p class="text-xs text-neutral-600 dark:text-gray-500 leading-relaxed">Юристы, аналитики и маркетологи работают как единый механизм.</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Отступы изменены: py-20 md:py-40 -->
+<section id="cta" class="py-20 md:py-40 bg-neutral-50 dark:bg-black px-4 relative transition-colors duration-300">
+<div class="max-w-3xl mx-auto text-center">
+<h2 class="text-5xl md:text-6xl lg:text-7xl font-serif leading-tight tracking-wide mb-10 text-black dark:text-platinum" data-aos="fade-up">
+Решения<br>
+<span class="gold-text font-serif italic mt-4 block">без права на ошибку.</span>
+</h2>
+<p class="text-sm md:text-base font-sans text-neutral-600 dark:text-gray-400 leading-relaxed mb-16" data-aos="fade-up" data-aos-delay="100">
+Если для вас важны: контроль, безопасность, прогнозируемый результат. Оставьте заявку.
+</p>
+
+<form action="#" method="POST" class="max-w-md mx-auto font-sans" data-aos="fade-up" data-aos-delay="200">
+<div class="space-y-8">
+<input type="text" name="name" placeholder="Ваше Имя" required
+class="w-full bg-transparent border-b border-neutral-300 dark:border-white/20 py-4 px-2 text-black dark:text-white transition-colors duration-300 placeholder-neutral-500 dark:placeholder-gray-600">
+<input type="tel" name="phone" placeholder="Телефон" required
+class="w-full bg-transparent border-b border-neutral-300 dark:border-white/20 py-4 px-2 text-black dark:text-white transition-colors duration-300 placeholder-neutral-500 dark:placeholder-gray-600">
+</div>
+<button type="submit" class="w-full mt-12 px-12 py-5 bg-transparent border border-gold/50 text-black dark:text-platinum uppercase tracking-[0.2em] text-xs font-medium hover:bg-gold hover:text-black hover:border-gold transition-all duration-700">
+Получить экспертную оценку
+</button>
+<p class="mt-8 text-[9px] tracking-[0.2em] text-neutral-500 dark:text-gray-600 uppercase">
+Без обязательств &bull; Конфиденциально &bull; Ответ в течение 24 часов
+</p>
+</form>
+</div>
+</section>
+
+<footer class="py-12 bg-white dark:bg-black text-center border-t border-neutral-200 dark:border-white/5 transition-colors duration-300 font-sans">
+<p class="text-[10px] uppercase tracking-[0.4em] text-neutral-500 dark:text-gray-600">&copy; 2026 Усачев Недвижимость. Family Office</p>
+</footer>
+
+<div class="fixed bottom-6 right-6 z-50">
+<button id="theme-toggle" type="button" class="text-neutral-500 dark:text-neutral-400 hover:bg-neutral-100 dark:hover:bg-coal focus:outline-none focus:ring-2 focus:ring-neutral-200 dark:focus:ring-neutral-700 rounded-full text-sm p-3 border border-neutral-200 dark:border-neutral-700 bg-white dark:bg-black shadow-lg transition-all duration-300">
+<svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+<svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.464 5.05l-.707-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 100 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+</button>
+</div>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+AOS.init({
+once: true,
+offset: 50,
+duration: 1000,
+easing: 'ease-out-quart',
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+const videos = document.querySelectorAll('.video-slide');
+if (videos.length === 0) return;
+let currentIndex = 0;
+const videoDuration = 6000; 
+
+setInterval(() => {
+videos[currentIndex].classList.remove('active');
+currentIndex = (currentIndex + 1) % videos.length;
+videos[currentIndex].classList.add('active');
+}, videoDuration);
+});
+
+var themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
+var themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+
+if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+themeToggleLightIcon.classList.remove('hidden');
+} else {
+themeToggleDarkIcon.classList.remove('hidden');
+}
+
+var themeToggleBtn = document.getElementById('theme-toggle');
+
+themeToggleBtn.addEventListener('click', function() {
+themeToggleDarkIcon.classList.toggle('hidden');
+themeToggleLightIcon.classList.toggle('hidden');
+
+if (localStorage.getItem('color-theme')) {
+if (localStorage.getItem('color-theme') === 'light') {
+document.documentElement.classList.add('dark');
+localStorage.setItem('color-theme', 'dark');
+} else {
+document.documentElement.classList.remove('dark');
+localStorage.setItem('color-theme', 'light');
+}
+} else {
+if (document.documentElement.classList.contains('dark')) {
+document.documentElement.classList.remove('dark');
+localStorage.setItem('color-theme', 'light');
+} else {
+document.documentElement.classList.add('dark');
+localStorage.setItem('color-theme', 'dark');
+}
+}
+});
+</script>
+</body>
+</html>
