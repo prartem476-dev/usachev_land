@@ -24,6 +24,7 @@
 <!-- Инфраструктура: Изолированный Self-Hosting Шрифтов (WOFF2) + Preload -->
 <link rel="preload" href="/fonts/satoshi-regular.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/satoshi-medium.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/satoshi-bold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/instrument-serif-italic.woff2" as="font" type="font/woff2" crossorigin>
 
 <!-- SEO: Микроразметка JSON-LD для обогащенного сниппета -->
@@ -45,18 +46,6 @@
 }
 </script>
 
-<script src="https://cdn.tailwindcss.com"></script>
-<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-<script src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"></script>
-
-<script>
-if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-document.documentElement.classList.add('dark');
-} else {
-document.documentElement.classList.remove('dark');
-}
-</script>
-
 <script>
 tailwind.config = {
 darkMode: 'class',
@@ -66,6 +55,17 @@ colors: { black: '#030303', coal: '#0b0b0d', platinum: '#e5e7eb', gold: { DEFAUL
 fontFamily: { sans: ['Satoshi', 'sans-serif'], serif: ['"Instrument Serif"', 'serif'] }
 }
 }
+}
+</script>
+<script src="https://cdn.tailwindcss.com" defer></script>
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js" defer></script>
+
+<script>
+if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+document.documentElement.classList.add('dark');
+} else {
+document.documentElement.classList.remove('dark');
 }
 </script>
 
@@ -93,6 +93,30 @@ body:not(.dark) ::-webkit-scrollbar-track { background: #f3f4f6; }
 .hide-scrollbar::-webkit-scrollbar { display: none; }
 .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
 
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+.skip-link:focus,
+.skip-link:active {
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+  width: auto;
+  height: auto;
+  padding: 0.75rem 1rem;
+  background: #ffffff;
+  color: #000000;
+  z-index: 9999;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 0 3px rgba(193, 160, 99, 0.5);
+  text-decoration: none;
+}
+
 .hero-title { font-size: clamp(2.5rem, 5vw + 1rem, 5.5rem) !important; line-height: 1.15 !important; }
 .hero-trigger { font-size: clamp(1.75rem, 3.5vw + 1rem, 3.5rem) !important; line-height: 1.2 !important; }
 .fluid-h2 { font-size: clamp(2rem, 4vw + 1rem, 4.5rem) !important; line-height: 1.1 !important; }
@@ -110,9 +134,17 @@ body:not(.dark) ::-webkit-scrollbar-track { background: #f3f4f6; }
 
 <body class="bg-white text-black dark:bg-black dark:text-platinum overflow-x-hidden selection:bg-gold selection:text-black transition-colors duration-300 relative">
 
+<a href="#main-content" class="skip-link sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:bg-white focus:text-black focus:px-3 focus:py-2 focus:rounded">Перейти к основному содержанию</a>
+
+<div class="modal-header">
+  <img src="logo.webp" alt="Логотип компании" width="200" height="50">
+  <button class="close-modal-icon" aria-label="Закрыть всплывающее окно"></button>
+</div>
+
 <!-- Sticky Навигация -->
 <nav class="fixed top-0 w-full z-50 bg-white/70 dark:bg-black/50 backdrop-blur-md border-b border-neutral-200 dark:border-white/10 transition-colors duration-300">
 <div class="max-w-7xl mx-auto px-4 py-3 md:py-4 flex justify-between items-center gap-2">
+
 <div class="font-serif text-xl md:text-2xl tracking-widest text-black dark:text-platinum uppercase shrink-0">Усачёвъ</div>
 <div class="hidden md:flex gap-8 font-sans text-xs uppercase tracking-widest text-neutral-600 dark:text-gray-400">
 <a href="#services" class="hover:text-gold transition-colors">Услуги</a>
@@ -122,7 +154,7 @@ body:not(.dark) ::-webkit-scrollbar-track { background: #f3f4f6; }
 </div>
 <div class="flex items-center gap-2 md:gap-4 shrink-0">
 <a href="#cta" class="text-[10px] md:text-xs font-sans uppercase tracking-widest md:tracking-[0.2em] text-black dark:text-black bg-gold/90 hover:bg-gold px-3 py-1.5 md:px-6 md:py-2 transition-colors whitespace-nowrap shrink-0">Получить экспертную оценку</a>
-<button id="mobile-menu-toggle" type="button" class="md:hidden p-1 text-black dark:text-platinum focus:outline-none" aria-label="Открыть меню">
+<button id="mobile-menu-toggle" type="button" class="md:hidden p-1 text-black dark:text-platinum focus:outline-none focus:ring-2 focus:ring-gold focus:ring-offset-2 focus:ring-offset-white dark:focus:ring-offset-black" aria-label="Открыть меню">
 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"></path></svg>
 </button>
 </div>
@@ -131,7 +163,7 @@ body:not(.dark) ::-webkit-scrollbar-track { background: #f3f4f6; }
 
 <!-- Off-Canvas Мобильное Меню -->
 <div id="mobile-menu-overlay" role="dialog" aria-modal="true" aria-label="Мобильное меню" class="fixed inset-0 z-50 bg-white/95 dark:bg-black/95 backdrop-blur-2xl translate-x-full opacity-0 pointer-events-none will-change-transform transition-all duration-500 md:hidden flex flex-col justify-center items-center">
-<button id="mobile-menu-close" type="button" class="absolute top-4 right-4 p-2 text-black dark:text-platinum focus:outline-none" aria-label="Закрыть меню">
+<button id="mobile-menu-close" type="button" class="absolute top-4 right-4 p-2 text-black dark:text-platinum focus:outline-none focus:ring-2 focus:ring-gold focus:ring-offset-2 focus:ring-offset-white dark:focus:ring-offset-black" aria-label="Закрыть меню">
 <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12"></path></svg>
 </button>
 <div class="flex flex-col gap-10 font-sans text-sm uppercase tracking-[0.2em] text-center text-black dark:text-platinum">
@@ -142,6 +174,8 @@ body:not(.dark) ::-webkit-scrollbar-track { background: #f3f4f6; }
 <a href="#cta" class="mobile-link mt-8 px-8 py-3 border border-gold/50 text-gold uppercase tracking-[0.2em] text-xs font-medium hover:bg-gold hover:text-black transition-all duration-700">Получить экспертную оценку</a>
 </div>
 </div>
+
+<main id="main-content">
 
 <!-- Hero-экран (Восстановлен текст источника) -->
 <section class="relative min-h-[100dvh] pt-28 pb-12 flex flex-col justify-center items-center text-center px-4 overflow-hidden bg-black">
@@ -552,6 +586,7 @@ body:not(.dark) ::-webkit-scrollbar-track { background: #f3f4f6; }
 </div>
 </div>
 </section>
+</main>
 
 <footer class="pt-12 pb-[calc(3rem+env(safe-area-inset-bottom))] bg-white dark:bg-black text-center border-t border-neutral-200 dark:border-white/5 transition-colors duration-300 font-sans">
 <p class="text-[11px] md:text-xs uppercase tracking-widest text-neutral-500 dark:text-gray-600">&copy; 2026 Усачев Недвижимость. Family Office</p>
