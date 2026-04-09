@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="ru" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, viewport-fit=cover">
+<!-- SEO: Оптимизированный Title -->
+<title>Элитная недвижимость в Москве | Усачев Недвижимость & Family Office</title>
+<!-- SEO: Расширенный Description -->
+<meta name="description" content="Премиальное агентство элитной недвижимости в Москве. Управление капиталом по стандарту Family Office, De Luxe объекты, конфиденциальное сопровождение сделок от 100 млн ₽.">
+<meta name="keywords" content="премиальная недвижимость, элитная недвижимость Москва, family office, инвестиции в недвижимость">
+
+<!-- ИНТЕГРАЦИЯ: CSP (Content Security Policy) Базовый уровень -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' 'unsafe-eval' https: data: blob:;">
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://карьера.рф/">
+<meta property="og:title" content="Усачев Недвижимость | Архитектура Капитала">
+<meta property="og:description" content="Премиальное агентство недвижимости. Управление капиталом, De Luxe объекты, строгая конфиденциальность.">
+<meta property="og:image" content="https://карьера.рф/og-preview.png">
+
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#030303" media="(prefers-color-scheme: dark)">
+
+<!-- Инфраструктура: Изолированный Self-Hosting Шрифтов (WOFF2) + Preload -->
+<link rel="preload" href="/fonts/satoshi-regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/satoshi-medium.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/instrument-serif-italic.woff2" as="font" type="font/woff2" crossorigin>
+
+<!-- SEO: Микроразметка JSON-LD для обогащенного сниппета -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "RealEstateAgent",
+  "name": "Усачев Недвижимость",
+  "image": "https://карьера.рф/og-preview.png",
+  "description": "Ваш личный Family Office в недвижимости. Сопровождаем сделки от 100 млн ₽.",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Москва",
+    "addressCountry": "RU"
+  },
+  "priceRange": "$$$",
+  "telephone": "+79990000000",
+  "url": "https://карьера.рф/"
+}
+</script>
+
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"></script>
+
+<script>
+if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+document.documentElement.classList.add('dark');
+} else {
+document.documentElement.classList.remove('dark');
+}
+</script>
+
+<script>
+tailwind.config = {
+darkMode: 'class',
+theme: {
+extend: {
+colors: { black: '#030303', coal: '#0b0b0d', platinum: '#e5e7eb', gold: { DEFAULT: '#C1A063', muted: '#9a7f4c' } },
+fontFamily: { sans: ['Satoshi', 'sans-serif'], serif: ['"Instrument Serif"', 'serif'] }
+}
+}
+}
+</script>
+
+<style>
+@font-face { font-family: 'Satoshi'; src: url('/fonts/satoshi-regular.woff2') format('woff2'); font-weight: 400; font-display: swap; }
+@font-face { font-family: 'Satoshi'; src: url('/fonts/satoshi-medium.woff2') format('woff2'); font-weight: 500; font-display: swap; }
+@font-face { font-family: 'Satoshi'; src: url('/fonts/satoshi-bold.woff2') format('woff2'); font-weight: 700; font-display: swap; }
+@font-face { font-family: 'Instrument Serif'; src: url('/fonts/instrument-serif-italic.woff2') format('woff2'); font-weight: 400; font-style: italic; font-display: swap; }
+
+html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+body { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; font-synthesis: none; }
+.gold-text { background: linear-gradient(135deg, #C1A063 0%, #9a7f4c 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+
+input:focus { outline: none; border-color: #C1A063; }
+input::placeholder { text-transform: uppercase; letter-spacing: 0.1em; }
+
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: #030303; }
+.dark ::-webkit-scrollbar-track { background: #030303; }
+body:not(.dark) ::-webkit-scrollbar-track { background: #f3f4f6; }
+::-webkit-scrollbar-thumb { background: #C1A063; }
+
+.video-slide { transition: opacity 1.5s ease-in-out; opacity: 0; z-index: 0; }
+.video-slide.active { opacity: 1; z-index: 1; }
+.hide-scrollbar::-webkit-scrollbar { display: none; }
+.hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+.hero-title { font-size: clamp(2.5rem, 5vw + 1rem, 5.5rem) !important; line-height: 1.15 !important; }
+.hero-trigger { font-size: clamp(1.75rem, 3.5vw + 1rem, 3.5rem) !important; line-height: 1.2 !important; }
+.fluid-h2 { font-size: clamp(2rem, 4vw + 1rem, 4.5rem) !important; line-height: 1.1 !important; }
+.fluid-h3 { font-size: clamp(1.5rem, 3vw + 0.5rem, 2.5rem) !important; line-height: 1.2 !important; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto !important; }
+  .video-slide { display: none !important; }
+  .hero-static-fallback { display: block !important; background: url('video-1-poster.png') center/cover no-repeat; absolute inset-0 w-full h-full; }
+  * { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
+  [data-aos] { opacity: 1 !important; transform: none !important; transition: none !important; }
+}
+</style>
+</head>
+
+<body class="bg-white text-black dark:bg-black dark:text-platinum overflow-x-hidden selection:bg-gold selection:text-black transition-colors duration-300 relative">
+
+<!-- Sticky Навигация -->
+<nav class="fixed top-0 w-full z-50 bg-white/70 dark:bg-black/50 backdrop-blur-md border-b border-neutral-200 dark:border-white/10 transition-colors duration-300">
+<div class="max-w-7xl mx-auto px-4 py-3 md:py-4 flex justify-between items-center gap-2">
+<div class="font-serif text-xl md:text-2xl tracking-widest text-black dark:text-platinum uppercase shrink-0">Усачёвъ</div>
+<div class="hidden md:flex gap-8 font-sans text-xs uppercase tracking-widest text-neutral-600 dark:text-gray-400">
+<a href="#services" class="hover:text-gold transition-colors">Услуги</a>
+<a href="#cases" class="hover:text-gold transition-colors">Кейсы</a>
+<a href="#infrastructure" class="hover:text-gold transition-colors">Инфраструктура</a>
+<a href="#team" class="hover:text-gold transition-colors">Команда</a>
+</div>
+<div class="flex items-center gap-2 md:gap-4 shrink-0">
+<a href="#cta" class="text-[10px] md:text-xs font-sans uppercase tracking-widest md:tracking-[0.2em] text-black dark:text-black bg-gold/90 hover:bg-gold px-3 py-1.5 md:px-6 md:py-2 transition-colors whitespace-nowrap shrink-0">Получить экспертную оценку</a>
+<button id="mobile-menu-toggle" type="button" class="md:hidden p-1 text-black dark:text-platinum focus:outline-none" aria-label="Открыть меню">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+</button>
+</div>
+</div>
+</nav>
+
+<!-- Off-Canvas Мобильное Меню -->
+<div id="mobile-menu-overlay" role="dialog" aria-modal="true" aria-label="Мобильное меню" class="fixed inset-0 z-50 bg-white/95 dark:bg-black/95 backdrop-blur-2xl translate-x-full opacity-0 pointer-events-none will-change-transform transition-all duration-500 md:hidden flex flex-col justify-center items-center">
+<button id="mobile-menu-close" type="button" class="absolute top-4 right-4 p-2 text-black dark:text-platinum focus:outline-none" aria-label="Закрыть меню">
+<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12"></path></svg>
+</button>
+<div class="flex flex-col gap-10 font-sans text-sm uppercase tracking-[0.2em] text-center text-black dark:text-platinum">
+<a href="#services" class="mobile-link hover:text-gold transition-colors">Услуги</a>
+<a href="#cases" class="mobile-link hover:text-gold transition-colors">Кейсы</a>
+<a href="#infrastructure" class="mobile-link hover:text-gold transition-colors">Инфраструктура</a>
+<a href="#team" class="mobile-link hover:text-gold transition-colors">Команда</a>
+<a href="#cta" class="mobile-link mt-8 px-8 py-3 border border-gold/50 text-gold uppercase tracking-[0.2em] text-xs font-medium hover:bg-gold hover:text-black transition-all duration-700">Получить экспертную оценку</a>
+</div>
+</div>
+
+<!-- Hero-экран (Восстановлен текст источника) -->
+<section class="relative min-h-[100dvh] pt-28 pb-12 flex flex-col justify-center items-center text-center px-4 overflow-hidden bg-black">
+<div class="absolute inset-0 z-0 bg-coal">
+<div class="hero-static-fallback hidden absolute inset-0 w-full h-full object-cover"></div>
+<video class="video-slide active absolute inset-0 w-full h-full object-cover" autoplay muted loop playsinline preload="auto" poster="video-1-poster.png"><source src="video-1.mp4" type="video/mp4"></video>
+<video class="video-slide absolute inset-0 w-full h-full object-cover" muted loop playsinline preload="none" poster="video-2-poster.png"><source src="video-2.mp4" type="video/mp4"></video>
+<video class="video-slide absolute inset-0 w-full h-full object-cover" muted loop playsinline preload="none" poster="video-3-poster.png"><source src="video-3.mp4" type="video/mp4"></video>
+</div>
+<div class="z-20 w-full max-w-[95%] lg:max-w-[70%] bg-black/20 dark:bg-black/30 backdrop-blur-md border border-white/10 p-8 md:p-14 rounded-sm flex flex-col items-center mt-12 shadow-2xl" data-aos="fade-up" data-aos-duration="1500">
+<p class="font-sans text-[11px] md:text-sm uppercase tracking-widest md:tracking-[0.4em] text-platinum mb-4 md:mb-6">Усачев Недвижимость</p>
+<h1 class="hero-title font-serif text-platinum drop-shadow-lg mb-2 md:mb-4">Ваш личный Family Office в недвижимости.</h1>
+<span class="hero-trigger gold-text font-serif italic block drop-shadow-none mb-10">С доверием. Без шума.</span>
+<p class="text-sm md:text-base text-gray-200 font-sans font-light leading-relaxed max-w-2xl mx-auto mb-8">
+Сопровождаем сделки от 100 млн ₽ от первой встречи до нотариуса. Вы получаете максимальную выгоду — мы берем на себя всю суету.
+</p>
+<div class="flex flex-col items-center">
+<a href="#cta" class="px-10 py-4 md:px-12 md:py-5 border border-gold/50 text-platinum uppercase tracking-[0.2em] text-[11px] md:text-xs font-sans font-medium hover:bg-gold hover:text-black hover:border-gold transition-all duration-700 bg-black/20 backdrop-blur-sm">Получить экспертную оценку</a>
+</div>
+</div>
+</section>
+
+<!-- Цифры -->
+<section class="py-16 md:py-24 bg-neutral-100 dark:bg-coal border-y border-neutral-200 dark:border-white/5 transition-colors duration-300">
+<div class="max-w-7xl mx-auto px-4">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-y-16 gap-x-8 text-center mb-16 md:mb-24">
+<div data-aos="fade-up"><p class="fluid-h2 font-serif gold-text mb-4">>1778</p><p class="text-[11px] md:text-xs font-sans uppercase tracking-[0.2em] text-neutral-600 dark:text-gray-400 font-light">проверенных покупателей</p></div>
+<div data-aos="fade-up" data-aos-delay="100"><p class="fluid-h2 font-serif gold-text mb-4">700+</p><p class="text-[11px] md:text-xs font-sans uppercase tracking-[0.2em] text-neutral-600 dark:text-gray-400 font-light">контактов собственников в базе</p></div>
+<div data-aos="fade-up" data-aos-delay="200"><p class="fluid-h2 font-serif gold-text mb-4">5 дней</p><p class="text-[11px] md:text-xs font-sans uppercase tracking-[0.2em] text-neutral-600 dark:text-gray-400 font-light">средний срок реализации</p></div>
+<div data-aos="fade-up" data-aos-delay="300"><p class="fluid-h2 font-serif gold-text mb-4">5</p><p class="text-[11px] md:text-xs font-sans uppercase tracking-[0.2em] text-neutral-600 dark:text-gray-400 font-light">отделов продаж</p></div>
+</div>
+</div>
+</section>
+
+<!-- Mid-Funnel CTA 1 -->
+<section class="hidden py-12 md:py-16 bg-black border-y border-white/10 text-center px-4 transition-colors duration-300">
+<div class="max-w-4xl mx-auto" data-aos="fade-up">
+<!-- SEO Fix: Заменено с h3 на div -->
+<div class="fluid-h3 font-serif text-platinum mb-4">Решения принимаются один раз. <span class="gold-text italic">Ошибка стоит дорого.</span></div>
+<p class="text-sm font-sans text-neutral-400 mb-8">Оставьте заявку и получите стратегию по вашему объекту.</p>
+<a href="#cta" class="inline-block px-8 py-4 border border-gold/50 text-platinum uppercase tracking-[0.2em] text-[11px] md:text-xs font-sans font-medium hover:bg-gold hover:text-black transition-all duration-700">
+Получить экспертную оценку
+</a>
+</div>
+</section>
+
+<!-- Блок Family Office (Восстановлен текст) -->
+<section class="py-20 md:py-40 bg-white dark:bg-black px-4 relative transition-colors duration-300">
+<div class="max-w-5xl mx-auto text-center" data-aos="fade-up">
+<!-- SEO Fix: Заменено с h2 (если было другим) на правильную логику h2 -->
+<h2 class="fluid-h2 font-serif tracking-wide mb-8 text-black dark:text-platinum">Мы работаем не с объектами.<br><span class="gold-text font-serif italic">Мы работаем с капиталом.</span></h2>
+<p class="text-sm md:text-base font-sans text-neutral-600 dark:text-gray-400 leading-relaxed max-w-3xl mx-auto mb-12">
+Комплексное сопровождение по стандарту Family Office. От подбора правильной локации и аудита до налогов, ремонта и юридической чистоты. Вы не вовлекаетесь в процесс. Вы получаете результат.
+</p>
+<a href="#cta" class="inline-block px-10 py-4 border border-gold/50 text-black dark:text-platinum uppercase tracking-[0.2em] text-[11px] md:text-xs font-sans font-medium hover:bg-gold hover:text-black transition-all duration-700">Получить экспертную оценку</a>
+</div>
+</section>
+
+<!-- Услуги (Восстановлен текст) -->
+<section id="services" class="py-16 md:py-32 bg-neutral-50 dark:bg-coal px-4 transition-colors duration-300">
+<div class="max-w-7xl mx-auto">
+<!-- SEO Fix: Заменено с h3 на div -->
+<div class="text-[11px] md:text-xs font-sans uppercase tracking-[0.4em] text-gold/70 mb-12 md:mb-20 text-center font-medium">Управление полным циклом</div>
+<div class="flex overflow-x-auto snap-x snap-mandatory gap-4 pb-6 md:grid md:grid-cols-2 lg:grid-cols-5 md:gap-6 md:pb-0 hide-scrollbar" data-aos="fade-up">
+<!-- 1. Вторичный рынок -->
+<div class="relative h-[400px] min-w-[85vw] md:min-w-0 snap-center border border-neutral-200 dark:border-white/10 hover:border-gold/50 transition-all duration-700 group overflow-hidden flex flex-col justify-end p-6 bg-white dark:bg-black/30">
+<img src="img-secondary.png" alt="Вторичный рынок" loading="lazy" class="absolute inset-0 w-full h-full object-cover transition-all duration-1000 group-hover:scale-105 opacity-60 group-hover:opacity-100 grayscale-0 md:grayscale">
+<div class="absolute inset-0 bg-gradient-to-t from-white dark:from-black via-white/50 dark:via-black/60 to-transparent"></div>
+<div class="relative z-10 font-sans">
+<!-- SEO Fix: Заменено с h4 на div -->
+<div class="text-sm font-medium uppercase tracking-widest text-black dark:text-platinum group-hover:text-gold mb-4 transition-colors">Вторичный рынок</div>
+<p class="text-xs text-neutral-600 dark:text-gray-400 leading-relaxed">Глубокий юридический аудит. 100% прозрачность и снятие рисков.</p>
+</div>
+</div>
+<!-- 2. Новостройки -->
+<div class="relative h-[400px] min-w-[85vw] md:min-w-0 snap-center border border-neutral-200 dark:border-white/10 hover:border-gold/50 transition-all duration-700 group overflow-hidden flex flex-col justify-end p-6 bg-white dark:bg-black/30">
+<img src="img-newbuilds.png" alt="Новостройки" loading="lazy" class="absolute inset-0 w-full h-full object-cover transition-all duration-1000 group-hover:scale-105 opacity-60 group-hover:opacity-100 grayscale-0 md:grayscale">
+<div class="absolute inset-0 bg-gradient-to-t from-white dark:from-black via-white/50 dark:via-black/60 to-transparent"></div>
+<div class="relative z-10 font-sans">
+<div class="text-sm font-medium uppercase tracking-widest text-black dark:text-platinum group-hover:text-gold mb-4 transition-colors">Новостройки</div>
+<p class="text-xs text-neutral-600 dark:text-gray-400 leading-relaxed">Подбор локаций с математически подтвержденным потенциалом роста.</p>
+</div>
+</div>
+<!-- 3. Трофейные активы -->
+<div class="relative h-[400px] min-w-[85vw] md:min-w-0 snap-center border border-neutral-200 dark:border-white/10 hover:border-gold/50 transition-all duration-700 group overflow-hidden flex flex-col justify-end p-6 bg-white dark:bg-black/30">
+<img src="img-trophy.png" alt="Трофейные активы" loading="lazy" class="absolute inset-0 w-full h-full object-cover transition-all duration-1000 group-hover:scale-105 opacity-60 group-hover:opacity-100 grayscale-0 md:grayscale">
+<div class="absolute inset-0 bg-gradient-to-t from-white dark:from-black via-white/50 dark:via-black/60 to-transparent"></div>
+<div class="relative z-10 font-sans">
+<div class="text-sm font-medium uppercase tracking-widest text-black dark:text-platinum group-hover:text-gold mb-4 transition-colors">Трофейные активы</div>
+<p class="text-xs text-neutral-600 dark:text-gray-400 leading-relaxed">Точечный подбор штучных лотов и особняков строго вне рынка.</p>
+</div>
+</div>
+<!-- 4. Коммерция -->
+<div class="relative h-[400px] min-w-[85vw] md:min-w-0 snap-center border border-neutral-200 dark:border-white/10 hover:border-gold/50 transition-all duration-700 group overflow-hidden flex flex-col justify-end p-6 bg-white dark:bg-black/30">
+<img src="img-commerce.png" alt="Коммерция" loading="lazy" class="absolute inset-0 w-full h-full object-cover transition-all duration-1000 group-hover:scale-105 opacity-60 group-hover:opacity-100 grayscale-0 md:grayscale">
+<div class="absolute inset-0 bg-gradient-to-t from-white dark:from-black via-white/50 dark:via-black/60 to-transparent"></div>
+<div class="relative z-10 font-sans">
+<div class="text-sm font-medium uppercase tracking-widest text-black dark:text-platinum group-hover:text-gold mb-4 transition-colors">Коммерция</div>
+<p class="text-xs text-neutral-600 dark:text-gray-400 leading-relaxed">Формирование высокодоходного портфеля и инвестиции в стрит-ритейл.</p>
+</div>
+</div>
+<!-- 5. Премиальные ремонты -->
+<div class="relative h-[400px] min-w-[85vw] md:min-w-0 snap-center border border-neutral-200 dark:border-white/10 hover:border-gold/50 transition-all duration-700 group overflow-hidden flex flex-col justify-end p-6 bg-white dark:bg-black/30">
+<img src="img-flipping.png" alt="Премиальные ремонты" loading="lazy" class="absolute inset-0 w-full h-full object-cover transition-all duration-1000 group-hover:scale-105 opacity-60 group-hover:opacity-100 grayscale-0 md:grayscale">
+<div class="absolute inset-0 bg-gradient-to-t from-white dark:from-black via-white/50 dark:via-black/60 to-transparent"></div>
+<div class="relative z-10 font-sans">
+<div class="text-sm font-medium uppercase tracking-widest text-black dark:text-platinum group-hover:text-gold mb-4 transition-colors">Премиальные ремонты</div>
+<p class="text-xs text-neutral-600 dark:text-gray-400 leading-relaxed">Реализация премиального ремонта под ключ. Увеличение капитализации.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Кейсы -->
+<section id="cases" class="py-16 md:py-32 bg-[#030303] dark:bg-coal border-t border-white/5 relative transition-colors duration-300 overflow-hidden">
+<div class="max-w-7xl mx-auto px-4 mb-12 md:mb-20">
+<h2 class="fluid-h2 font-serif text-platinum tracking-wide mb-6" data-aos="fade-up">Результаты, которые говорят сами за себя.</h2>
+<p class="text-sm md:text-base font-sans text-neutral-400 leading-relaxed max-w-2xl" data-aos="fade-up" data-aos-delay="100">Подтвержденная экспертиза за последний квартал в сегментах Premium и De Luxe.</p>
+</div>
+<div class="max-w-7xl mx-auto px-4">
+<div class="flex overflow-x-auto snap-x snap-mandatory gap-4 pb-6 hide-scrollbar md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-6 md:pb-0">
+
+<!-- Кейсы 1-5 (с фиксом hover для мобильных) -->
+<div class="relative h-[400px] md:h-[450px] min-w-[85vw] md:min-w-0 snap-center overflow-hidden group border border-white/10 bg-black" data-aos="fade-up" data-aos-delay="0">
+<img src="case-lavrushinsky.png" alt="ЖК Лаврушинский" loading="lazy" class="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 md:grayscale md:group-hover:grayscale-0 md:group-hover:scale-105">
+<div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/60 to-transparent opacity-100"></div>
+<div class="absolute bottom-6 left-6 right-6 p-6 bg-black/40 backdrop-blur-md border border-white/10 transition-all duration-500 md:group-hover:bg-black/60 md:group-hover:backdrop-blur-xl md:group-hover:-translate-y-2">
+<div class="text-[12px] md:text-sm font-sans uppercase tracking-[0.2em] text-platinum border-b border-white/10 pb-3 transition-colors group-hover:border-gold/50">ЖК «Лаврушинский»</div>
+<div class="grid grid-rows-[1fr] md:grid-rows-[0fr] md:group-hover:grid-rows-[1fr] transition-[grid-template-rows] duration-500 ease-out">
+<div class="overflow-hidden">
+<div class="case-details font-sans text-platinum/80 space-y-3 pt-4 opacity-100 translate-y-0 md:opacity-0 md:translate-y-4 md:group-hover:opacity-100 md:group-hover:translate-y-0 transition-all duration-500 delay-75">
+<div class="flex flex-col group/row cursor-default"><span class="text-gold text-[9px] uppercase tracking-widest font-medium mb-0.5 transition-colors">Задача & Сложность</span><span class="text-[11px] md:text-xs font-light leading-snug text-platinum/90 transition-colors">Срочная продажа пентхауса до отъезда за границу. Требование полной конфиденциальности.</span></div>
+<div class="flex flex-col group/row cursor-default"><span class="text-gold text-[9px] uppercase tracking-widest font-medium mb-0.5 transition-colors">Решение</span><span class="text-[11px] md:text-xs font-light leading-snug text-platinum/90 transition-colors">Эксклюзивная закрытая презентация по базе (12 целевых показов вне рынка).</span></div>
+<div class="flex flex-col mt-2 pt-2 border-t border-white/5 group/row cursor-default"><span class="text-gold text-[9px] uppercase tracking-widest font-medium mb-0.5 transition-colors">Итог</span><span class="text-[12px] md:text-sm text-white font-medium transition-colors">Сделка за 4 дня (190 000 000 ₽)</span></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="relative h-[400px] md:h-[450px] min-w-[85vw] md:min-w-0 snap-center overflow-hidden group border border-white/10 bg-black lg:col-span-2" data-aos="fade-up" data-aos-delay="100">
+<img src="case-frunzenskaya.png" alt="Фрунзенская набережная" loading="lazy" class="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 md:grayscale md:group-hover:grayscale-0 md:group-hover:scale-105">
+<div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/60 to-transparent opacity-100"></div>
+<div class="absolute bottom-6 left-6 right-6 lg:right-auto lg:w-96 p-6 bg-black/40 backdrop-blur-md border border-white/10 transition-all duration-500 md:group-hover:bg-black/60 md:group-hover:backdrop-blur-xl md:group-hover:-translate-y-2">
+<div class="text-[12px] md:text-sm font-sans uppercase tracking-[0.2em] text-platinum border-b border-white/10 pb-3 transition-colors group-hover:border-gold/50">Фрунзенская набережная</div>
+<div class="grid grid-rows-[1fr] md:grid-rows-[0fr] md:group-hover:grid-rows-[1fr] transition-[grid-template-rows] duration-500 ease-out">
+<div class="overflow-hidden">
+<div class="case-details font-sans text-platinum/80 space-y-3 pt-4 opacity-100 translate-y-0 md:opacity-0 md:translate-y-4 md:group-hover:opacity-100 md:group-hover:translate-y-0 transition-all duration-500 delay-75">
+<div class="flex flex-col group/row cursor-default"><span class="text-gold text-[9px] uppercase tracking-widest font-medium mb-0.5 transition-colors">Задача & Сложность</span><span class="text-[11px] md:text-xs font-light leading-snug text-platinum/90 transition-colors">Максимизация стоимости актива в условиях стагнации вторичного рынка.</span></div>
+<div class="flex flex-col group/row cursor-default"><span class="text-gold text-[9px] uppercase tracking-widest font-medium mb-0.5 transition-colors">Решение</span><span class="text-[11px] md:text-xs font-light leading-snug text-platinum/90 transition-colors">Позиционирование объекта как трофейного лота, редизайн экспозиции.</span></div>
+<div class="flex flex-col mt-2 pt-2 border-t border-white/5 group/row cursor-default"><span class="text-gold text-[9px] uppercase tracking-widest font-medium mb-0.5 transition-colors">Итог</span><span class="text-[12px] md:text-sm text-white font-medium transition-colors">+15% к рынку (210 000 000 ₽)</span></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="relative h-[400px] md:h-[450px] min-w-[85vw] md:min-w-0 snap-center overflow-hidden group border border-white/10 bg-black lg:col-span-2" data-aos="fade-up" data-aos-delay="200">
+<img src="case-poklonnaya.png" alt="ЖК Поклонная 9" loading="lazy" class="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 md:grayscale md:group-hover:grayscale-0 md:group-hover:scale-105">
+<div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/60 to-transparent opacity-100"></div>
+<div class="absolute bottom-6 left-6 right-6 lg:right-auto lg:w-96 p-6 bg-black/40 backdrop-blur-md border border-white/10 transition-all duration-500 md:group-hover:bg-black/60 md:group-hover:backdrop-blur-xl md:group-hover:-translate-y-2">
+<div class="text-[12px] md:text-sm font-sans uppercase tracking-[0.2em] text-platinum border-b border-white/10 pb-3 transition-colors group-hover:border-gold/50">ЖК «Поклонная 9»</div>
+<div class="grid grid-rows-[1fr] md:grid-rows-[0fr] md:group-hover:grid-rows-[1fr] transition-[grid-template-rows] duration-500 ease-out">
+<div class="overflow-hidden">
+<div class="case-details font-sans text-platinum/80 space-y-3 pt-4 opacity-100 translate-y-0 md:opacity-0 md:translate-y-4 md:group-hover:opacity-100 md:group-hover:translate-y-0 transition-all duration-500 delay-75">
+<div class="flex flex-col group/row cursor-default"><span class="text-gold text-[9px] uppercase tracking-widest font-medium mb-0.5 transition-colors">Задача & Сложность</span><span class="text-[11px] md:text-xs font-light leading-snug text-platinum/90 transition-colors">Быстрый выход из инвестиции для реинвестирования в коммерцию.</span></div>
+<div class="flex flex-col group/row cursor-default"><span class="text-gold text-[9px] uppercase tracking-widest font-medium mb-0.5 transition-colors">Решение</span><span class="text-[11px] md:text-xs font-light leading-snug text-platinum/90 transition-colors">Прямой диалог с пулом инвесторов из нашей партнерской сети.</span></div>
+<div class="flex flex-col mt-2 pt-2 border-t border-white/5 group/row cursor-default"><span class="text-gold text-[9px] uppercase tracking-widest font-medium mb-0.5 transition-colors">Итог</span><span class="text-[12px] md:text-sm text-white font-medium transition-colors">Реализация за 1 неделю (175 000 000 ₽)</span></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="relative h-[400px] md:h-[450px] min-w-[85vw] md:min-w-0 snap-center overflow-hidden group border border-white/10 bg-black" data-aos="fade-up" data-aos-delay="300">
+<img src="case-trubetskaya.png" alt="Ул. Трубецкая, 12" loading="lazy" class="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 md:grayscale md:group-hover:grayscale-0 md:group-hover:scale-105">
+<div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/60 to-transparent opacity-100"></div>
+<div class="absolute bottom-6 left-6 right-6 p-6 bg-black/40 backdrop-blur-md border border-white/10 transition-all duration-500 md:group-hover:bg-black/60 md:group-hover:backdrop-blur-xl md:group-hover:-translate-y-2">
+<div class="text-[12px] md:text-sm font-sans uppercase tracking-[0.2em] text-platinum border-b border-white/10 pb-3 transition-colors group-hover:border-gold/50">Ул. Трубецкая, 12</div>
+<div class="grid grid-rows-[1fr] md:grid-rows-[0fr] md:group-hover:grid-rows-[1fr] transition-[grid-template-rows] duration-500 ease-out">
+<div class="overflow-hidden">
+<div class="case-details font-sans text-platinum/80 space-y-3 pt-4 opacity-100 translate-y-0 md:opacity-0 md:translate-y-4 md:group-hover:opacity-100 md:group-hover:translate-y-0 transition-all duration-500 delay-75">
+<div class="flex flex-col group/row cursor-default"><span class="text-gold text-[9px] uppercase tracking-widest font-medium mb-0.5 transition-colors">Задача & Сложность</span><span class="text-[11px] md:text-xs font-light leading-snug text-platinum/90 transition-colors">Сложная цепочка из 3 собственников и обременения.</span></div>
+<div class="flex flex-col group/row cursor-default"><span class="text-gold text-[9px] uppercase tracking-widest font-medium mb-0.5 transition-colors">Решение</span><span class="text-[11px] md:text-xs font-light leading-snug text-platinum/90 transition-colors">Полная юридическая реструктуризация сделки комплаенс-отделом.</span></div>
+<div class="flex flex-col mt-2 pt-2 border-t border-white/5 group/row cursor-default"><span class="text-gold text-[9px] uppercase tracking-widest font-medium mb-0.5 transition-colors">Итог</span><span class="text-[12px] md:text-sm text-white font-medium transition-colors">Безопасная сделка (216 000 000 ₽)</span></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="relative h-[400px] md:h-[450px] min-w-[85vw] md:min-w-0 snap-center overflow-hidden group border border-white/10 bg-black md:col-span-2 lg:col-span-3" data-aos="fade-up" data-aos-delay="400">
+<img src="case-skyview.png" alt="ЖК Sky View" loading="lazy" class="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 md:grayscale md:group-hover:grayscale-0 md:group-hover:scale-105">
+<div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/60 to-transparent opacity-100"></div>
+<div class="absolute bottom-6 left-6 md:left-auto md:right-6 md:w-[400px] p-6 bg-black/40 backdrop-blur-md border border-white/10 transition-all duration-500 md:group-hover:bg-black/60 md:group-hover:backdrop-blur-xl md:group-hover:-translate-y-2">
+<div class="text-[12px] md:text-sm font-sans uppercase tracking-[0.2em] text-platinum border-b border-white/10 pb-3 transition-colors group-hover:border-gold/50">ЖК Sky View</div>
+<div class="grid grid-rows-[1fr] md:grid-rows-[0fr] md:group-hover:grid-rows-[1fr] transition-[grid-template-rows] duration-500 ease-out">
+<div class="overflow-hidden">
+<div class="case-details font-sans text-platinum/80 space-y-3 pt-4 opacity-100 translate-y-0 md:opacity-0 md:translate-y-4 md:group-hover:opacity-100 md:group-hover:translate-y-0 transition-all duration-500 delay-75">
+<div class="flex flex-col group/row cursor-default"><span class="text-gold text-[9px] uppercase tracking-widest font-medium mb-0.5 transition-colors">Задача & Сложность</span><span class="text-[11px] md:text-xs font-light leading-snug text-platinum/90 transition-colors">Переуступка прав от застройщика до сдачи объекта.</span></div>
+<div class="flex flex-col group/row cursor-default"><span class="text-gold text-[9px] uppercase tracking-widest font-medium mb-0.5 transition-colors">Решение</span><span class="text-[11px] md:text-xs font-light leading-snug text-platinum/90 transition-colors">Премиальный флиппинг-аудит и разработка дизайн-стратегии.</span></div>
+<div class="flex flex-col mt-2 pt-2 border-t border-white/5 group/row cursor-default"><span class="text-gold text-[9px] uppercase tracking-widest font-medium mb-0.5 transition-colors">Итог</span><span class="text-[12px] md:text-sm text-white font-medium transition-colors">ROI +25% годовых (127 000 000 ₽)</span></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- Инфраструктура сделки (Восстановлен текст) -->
+<section id="infrastructure" class="py-16 md:py-32 bg-white dark:bg-black px-4 relative transition-colors duration-300">
+<div class="max-w-6xl mx-auto mb-16 md:mb-24">
+<!-- SEO Fix: Заменено с h3 на div (стиль сохранен) -->
+<div class="text-[11px] md:text-xs font-sans uppercase tracking-[0.4em] text-gold/70 mb-12 md:mb-20 text-center font-medium">Инфраструктура сделки</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12 text-black dark:text-platinum font-sans">
+<div data-aos="fade-right"><div class="text-xl font-light uppercase tracking-widest mb-4">Единая точка входа</div><p class="text-sm text-neutral-600 dark:text-gray-500 font-light">Один доверенный партнер вместо десятков агентов. Личный эксперт несет полную ответственность за результат.</p></div>
+<div data-aos="fade-left"><div class="text-xl font-light uppercase tracking-widest mb-4">Защита капитала</div><p class="text-sm text-neutral-600 dark:text-gray-500 font-light">Гарантируем реализацию недвижимости по максимальной стоимости без необходимости идти на компромиссы.</p></div>
+<div data-aos="fade-right"><div class="text-xl font-light uppercase tracking-widest mb-4">Встречный трафик</div><p class="text-sm text-neutral-600 dark:text-gray-500 font-light">Сформированное комьюнити реальных покупателей и собственников позволяет закрывать сделки быстро.</p></div>
+<div data-aos="fade-left"><div class="text-xl font-light uppercase tracking-widest mb-4">Абсолютная конфиденциальность</div><p class="text-sm text-neutral-600 dark:text-gray-500 font-light">Строгий NDA. Детали сделки остаются в тайне. Нулевой риск утечки информации.</p></div>
+</div>
+</div>
+</section>
+
+<!-- Mid-Funnel CTA 2 -->
+<section class="py-12 md:py-16 bg-neutral-100 dark:bg-coal border-y border-neutral-200 dark:border-white/5 text-center px-4 transition-colors duration-300">
+<div class="max-w-4xl mx-auto" data-aos="fade-up">
+<div class="fluid-h3 font-serif text-black dark:text-platinum mb-8">Вы нашли того, кто <span class="gold-text italic">отвечает за результат.</span></div>
+<a href="#cta" class="inline-block px-8 py-4 bg-black dark:bg-white text-white dark:text-black uppercase tracking-[0.2em] text-[11px] md:text-xs font-sans font-medium hover:bg-gold dark:hover:bg-gold hover:text-black transition-all duration-700 shadow-xl">
+Получить экспертную оценку
+</a>
+</div>
+</section>
+
+<!-- Маркетинг (Восстановлен текст) -->
+<section class="py-20 md:py-40 bg-neutral-100 dark:bg-coal px-4 relative transition-colors duration-300">
+<div class="max-w-7xl mx-auto">
+<h2 class="fluid-h2 font-serif tracking-wide mb-16 md:mb-20 text-center text-black dark:text-platinum" data-aos="fade-up">Мы не размещаем <br><span class="gold-text font-serif italic mt-4 block">мы позиционируем.</span></h2>
+<div class="flex flex-col lg:flex-row gap-16 items-center">
+<div class="w-full lg:w-1/2 grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-12 text-black dark:text-platinum font-sans">
+<div data-aos="fade-right"><div class="text-lg font-light uppercase tracking-widest mb-4">Эстетика кадра</div><p class="text-sm text-neutral-600 dark:text-gray-500 leading-relaxed">Качественная архитектурная съемка и кинематографичные видео.</p></div>
+<div data-aos="fade-right" data-aos-delay="100"><div class="text-lg font-light uppercase tracking-widest mb-4">Диалог с капиталом</div><p class="text-sm text-neutral-600 dark:text-gray-500 leading-relaxed">Презентация объектов через закрытые рассылки клиентам Private Banking.</p></div>
+<div data-aos="fade-right" data-aos-delay="200"><div class="text-lg font-light uppercase tracking-widest mb-4">Международный уровень</div><p class="text-sm text-neutral-600 dark:text-gray-500 leading-relaxed">Прямой диалог с зарубежными инвесторами и их советниками.</p></div>
+<div data-aos="fade-right" data-aos-delay="300"><div class="text-lg font-light uppercase tracking-widest mb-4">Тизерный формат</div><p class="text-sm text-neutral-600 dark:text-gray-500 leading-relaxed">Деликатный выход на широ порталы с полным сохранением приватности.</p></div>
+</div>
+<div class="w-full lg:w-1/2 grid grid-cols-2 gap-4">
+<img src="img-kitchen.png" alt="Эстетика кадра - Интерьер" loading="lazy" class="w-full h-full object-cover transition-all duration-700 hover:scale-[1.02] shadow-lg" data-aos="fade-left">
+<img src="img-balcony.png" alt="Тизерный формат - Экстерьер" loading="lazy" class="w-full h-full object-cover transition-all duration-700 hover:scale-[1.02] shadow-lg mt-12" data-aos="fade-left" data-aos-delay="200">
+</div>
+</div>
+</div>
+</section>
+
+<!-- Основатель (Восстановлен текст) -->
+<section id="team" class="py-16 md:py-32 bg-white dark:bg-black px-4 transition-colors duration-300">
+<div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-16">
+<div class="w-full md:w-5/12" data-aos="fade-right">
+<div class="aspect-[3/4] bg-neutral-100 dark:bg-coal relative overflow-hidden transition-colors duration-300">
+<img src="img-founder.png" alt="Вера Волкова" loading="lazy" class="w-full h-full object-cover grayscale-0 md:grayscale opacity-100 md:opacity-90 hover:grayscale-0 hover:opacity-100 transition-all duration-700 shadow-xl">
+<div class="absolute inset-0 border border-black/5 dark:border-white/10 m-4 pointer-events-none"></div>
+</div>
+</div>
+<div class="w-full md:w-7/12 text-black dark:text-platinum">
+<div class="text-[11px] md:text-xs font-sans uppercase tracking-[0.4em] text-gold/70 mb-4 font-medium">Гарант сделки</div>
+<h2 class="fluid-h2 font-serif tracking-wide mb-4">Вера Волкова</h2>
+<p class="text-sm font-sans tracking-[0.2em] text-neutral-600 dark:text-gray-400 uppercase mb-10">Основатель. Практик.</p>
+<div class="w-12 h-px bg-gold mb-10"></div>
+<p class="fluid-h3 font-serif leading-relaxed italic mb-10 text-neutral-800 dark:text-platinum">
+«Недвижимость -- это не про метры. Это про ответственность за чужие деньги и абсолютное доверие.»
+</p>
+<p class="text-sm font-sans text-neutral-600 dark:text-gray-500 leading-relaxed mb-10">
+Более 20 лет практической работы. Масштабный опыт на государственном уровне (статус экс-депутата Госдумы) служит фундаментом административной поддержки и безопасности каждой сделки.
+</p>
+<a href="#cta" class="inline-block px-10 py-4 border border-gold/50 text-black dark:text-platinum uppercase tracking-[0.2em] text-[11px] md:text-xs font-sans font-medium hover:bg-gold hover:text-black transition-all duration-700">
+Связаться с экспертом
+</a>
+</div>
+</div>
+</section>
+
+<!-- Команда (Восстановлен текст) -->
+<section class="py-16 md:py-32 border-y border-neutral-200 dark:border-white/5 px-4 text-center relative bg-cover bg-center" style="background-image: url('bg-titanium.png');">
+<div class="absolute inset-0 bg-white/70 dark:bg-black/75 z-0 transition-colors duration-300"></div>
+<div class="max-w-6xl mx-auto relative z-10" data-aos="fade-up">
+<h2 class="fluid-h2 font-serif tracking-wide mb-6 text-black dark:text-platinum text-center">Команда, которая делает результат</h2>
+<p class="text-sm md:text-base font-sans text-neutral-600 dark:text-gray-400 leading-relaxed mb-12 text-center">
+За вашим личным брокером стоит ресурс всей компании.
+</p>
+<div class="w-full h-[250px] md:h-[450px] mb-12 md:mb-16 relative overflow-hidden bg-neutral-100 dark:bg-coal transition-colors duration-300">
+<img src="img-team.png" alt="Команда Усачев Недвижимость" loading="lazy" class="w-full h-full object-cover grayscale-0 md:grayscale opacity-100 md:opacity-90 hover:grayscale-0 hover:opacity-100 transition-all duration-700">
+<div class="absolute inset-0 border border-black/5 dark:border-white/10 m-4 pointer-events-none"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-left text-black dark:text-platinum font-sans">
+<div class="p-8 border border-neutral-200 dark:border-white/10 bg-white/50 dark:bg-black/40 backdrop-blur-sm">
+<div class="text-sm font-medium uppercase tracking-widest text-gold mb-4">Комплаенс-отдел</div>
+<p class="text-xs text-neutral-600 dark:text-gray-500 leading-relaxed">Аудит каждого объекта по строгим стандартам банковского контроля.</p>
+</div>
+<div class="p-8 border border-neutral-200 dark:border-white/10 bg-white/50 dark:bg-black/40 backdrop-blur-sm">
+<div class="text-sm font-medium uppercase tracking-widest text-gold mb-4">Архитекторы эстетики</div>
+<p class="text-xs text-neutral-600 dark:text-gray-500 leading-relaxed">Собственная команда дизайнеров и строителей класса люкс.</p>
+</div>
+<div class="p-8 border border-neutral-200 dark:border-white/10 bg-white/50 dark:bg-black/40 backdrop-blur-sm">
+<div class="text-sm font-medium uppercase tracking-widest text-gold mb-4">Синергия</div>
+<p class="text-xs text-neutral-600 dark:text-gray-500 leading-relaxed">Юристы, аналитики и маркетологи работают как единый слаженный механизм.</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Модуль отработки возражений (FAQ) -->
+<section class="py-16 md:py-24 bg-black border-y border-white/5 px-4 font-sans relative z-10 transition-colors duration-300">
+  <div class="max-w-4xl mx-auto" data-aos="fade-up">
+    <h2 class="fluid-h2 font-serif text-platinum tracking-wide mb-12 text-center">Архитектура доверия</h2>
+    
+    <div class="space-y-2">
+      <details class="group border-b border-white/10 pb-4 [&_summary::-webkit-details-marker]:hidden">
+        <summary class="flex justify-between items-center cursor-pointer list-none text-platinum hover:text-gold transition-colors duration-300">
+          <span class="text-sm md:text-base uppercase tracking-widest font-light pr-4">Почему стоит работать с Family Office, а не обычным агентством?</span>
+          <span class="transition-transform duration-300 group-open:rotate-45 text-gold text-2xl font-light shrink-0">+</span>
+        </summary>
+        <div class="pt-6 pb-2 text-xs md:text-sm text-neutral-400 leading-relaxed font-light animate-fade-in">
+          Обычное агентство продает метры. Мы выступаем единой точка входа для управления капиталом. За вашим личным брокером закреплен штат юристов, налоговых консультантов и архитекторов. Вы не вовлекаетесь в операционную рутину — вы утверждаете результат.
+        </div>
+      </details>
+
+      <details class="group border-b border-white/10 pb-4 pt-4 [&_summary::-webkit-details-marker]:hidden">
+        <summary class="flex justify-between items-center cursor-pointer list-none text-platinum hover:text-gold transition-colors duration-300">
+          <span class="text-sm md:text-base uppercase tracking-widest font-light pr-4">Как аппаратно гарантируется конфиденциальность?</span>
+          <span class="transition-transform duration-300 group-open:rotate-45 text-gold text-2xl font-light shrink-0">+</span>
+        </summary>
+        <div class="pt-6 pb-2 text-xs md:text-sm text-neutral-400 leading-relaxed font-light animate-fade-in">
+          Перед началом любого аудита подписывается строгий NDA. Мы используем закрытые базы Private Banking и тизерные форматы экспозиции (без точных адресов и фото фасадов), что технически исключает идентификацию собственника актива.
+        </div>
+      </details>
+      
+      <details class="group border-b border-white/10 pb-4 pt-4 [&_summary::-webkit-details-marker]:hidden">
+        <summary class="flex justify-between items-center cursor-pointer list-none text-platinum hover:text-gold transition-colors duration-300">
+          <span class="text-sm md:text-base uppercase tracking-widest font-light pr-4">Что, если вы не сможете реализовать объект?</span>
+          <span class="transition-transform duration-300 group-open:rotate-45 text-gold text-2xl font-light shrink-0">+</span>
+        </summary>
+        <div class="pt-6 pb-2 text-xs md:text-sm text-neutral-400 leading-relaxed font-light animate-fade-in">
+          Мы берем в работу только те активы, где математически видим потенциал закрытия сделки. Если объект неликвиден, мы формируем стратегию его реструктуризации (флиппинг, перевод в коммерцию), а не пытаемся держать его на витрине годами.
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- CTA / Интеграция с CRM -->
+<section id="cta" class="py-20 md:py-40 bg-neutral-50 dark:bg-black px-4 relative transition-colors duration-300">
+<div class="max-w-3xl mx-auto text-center">
+
+<!-- Триггер лимитирования (Восстановлен текст) -->
+<div class="mb-8" data-aos="fade-up">
+<p class="text-[10px] md:text-xs font-sans uppercase tracking-[0.2em] text-gold border border-gold/30 inline-block px-6 py-2 bg-gold/5">
+Принимаем не более 10 клиентов в месяц для сохранения стандарта Family Office.
+</p>
+</div>
+
+<h2 class="fluid-h2 font-serif tracking-wide mb-10 text-black dark:text-platinum" data-aos="fade-up">
+Решения без права на ошибку.
+</h2>
+<p class="text-sm md:text-base font-sans text-neutral-600 dark:text-gray-400 leading-relaxed mb-16" data-aos="fade-up" data-aos-delay="100">
+Если для вас важны: контроль, безопасность, прогнозируемый результат. Оставьте заявку.
+</p>
+
+<!-- ARIA-live регион для оповещения скринридеров -->
+<div id="form-status" aria-live="polite" class="sr-only"></div>
+
+<form id="lead-form" action="#" method="POST" class="max-w-md mx-auto font-sans" data-aos="fade-up" data-aos-delay="200">
+<input type="text" name="_honeypot" class="hidden" tabindex="-1" autocomplete="off">
+<input type="hidden" id="csrf_token" name="csrf_token">
+<!-- Скрытое поле для маршрутизации в Bitrix24 -->
+<input type="hidden" name="utm_cta" id="utm_cta" value="expert_evaluation">
+
+<div class="space-y-8">
+<div class="relative text-left">
+<label for="name" class="sr-only">Имя</label>
+<input id="name" type="text" name="name" placeholder="ИМЯ" required minlength="2" class="w-full bg-transparent border-b border-neutral-300 dark:border-white/20 py-4 px-2 text-base md:text-sm text-black dark:text-white transition-colors duration-300 placeholder-neutral-500 dark:placeholder-gray-600">
+</div>
+<div class="relative text-left">
+<label for="phone" class="sr-only">Телефон</label>
+<input id="phone" type="tel" name="phone" placeholder="+7 (___) ___-__-__" required pattern="^[\+]\d{1}\s[\(]\d{3}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}$" title="Формат: +7 (999) 999-99-99" class="w-full bg-transparent border-b border-neutral-300 dark:border-white/20 py-4 px-2 text-base md:text-sm text-black dark:text-white transition-colors duration-300 placeholder-neutral-500 dark:placeholder-gray-600">
+</div>
+</div>
+
+<button type="submit" id="submit-btn" class="group w-full mt-12 px-12 py-5 bg-transparent border border-gold/50 text-black dark:text-platinum uppercase tracking-[0.2em] text-[11px] md:text-xs font-medium hover:bg-gold hover:text-black hover:border-gold transition-all duration-700 disabled:opacity-50 disabled:cursor-wait">
+<span class="block group-disabled:hidden">Получить экспертную оценку</span>
+<span class="hidden group-disabled:block animate-pulse">Идет шифрованная передача...</span>
+</button>
+
+<p class="mt-8 text-[11px] md:text-xs tracking-widest text-neutral-500 dark:text-gray-600 uppercase">
+Без обязательств &bull; Конфиденциально &bull; Ответ в течение 24 часов
+</p>
+</form>
+</div>
+</section>
+
+<!-- Локация -->
+<section id="interactive-location" class="py-16 md:py-24 bg-black border-t border-white/5 relative z-10 transition-colors duration-300">
+<div class="max-w-6xl mx-auto px-4 flex flex-col items-center">
+<div class="text-[11px] md:text-xs font-sans uppercase tracking-[0.4em] text-gold/70 mb-10 font-medium text-center">Локация Family Office</div>
+<div class="w-full max-w-5xl h-[400px] md:h-[500px] relative overflow-hidden border border-white/10 grayscale contrast-125 opacity-90 hover:grayscale-0 hover:opacity-100 transition-all duration-700 bg-coal group" data-aos="fade-up">
+<img src="image_18.png" alt="Офис Усачев Недвижимость" loading="lazy" class="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105">
+</div>
+</div>
+</section>
+
+<footer class="pt-12 pb-[calc(3rem+env(safe-area-inset-bottom))] bg-white dark:bg-black text-center border-t border-neutral-200 dark:border-white/5 transition-colors duration-300 font-sans">
+<p class="text-[11px] md:text-xs uppercase tracking-widest text-neutral-500 dark:text-gray-600">&copy; 2026 Усачев Недвижимость. Family Office</p>
+</footer>
+
+<!-- Theme Toggle -->
+<div class="fixed bottom-6 right-6 z-50">
+<button id="theme-toggle" type="button" aria-label="Переключить тему" class="text-neutral-500 dark:text-neutral-400 hover:bg-neutral-100 dark:hover:bg-coal focus:outline-none focus:ring-2 focus:ring-neutral-200 dark:focus:ring-neutral-700 rounded-full text-sm p-3 border border-neutral-200 dark:border-neutral-700 bg-white dark:bg-black shadow-lg transition-all duration-300 flex items-center justify-center">
+<svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+<svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.464 5.05l-.707-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 100 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+</button>
+</div>
+
+<!-- JS Core -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+AOS.init({ 
+    once: true, 
+    offset: 50, 
+    duration: prefersReducedMotion ? 0 : 1000, 
+    easing: 'ease-out-quart', 
+    disable: prefersReducedMotion 
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+const mobileMenuClose = document.getElementById('mobile-menu-close');
+const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
+const mobileLinks = document.querySelectorAll('.mobile-link');
+let isMenuOpen = false;
+
+const focusableElements = 'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
+let firstFocusableElement;
+let lastFocusableElement;
+
+const initFocusTrap = () => {
+    const focusableContent = mobileMenuOverlay.querySelectorAll(focusableElements);
+    if(focusableContent.length === 0) return;
+    firstFocusableElement = focusableContent;
+    lastFocusableElement = focusableContent[focusableContent.length - 1];
+    firstFocusableElement.focus();
+};
+
+const toggleMenu = () => {
+isMenuOpen = !isMenuOpen;
+if (isMenuOpen) {
+mobileMenuOverlay.classList.remove('translate-x-full', 'opacity-0', 'pointer-events-none');
+document.body.style.overflow = 'hidden';
+setTimeout(initFocusTrap, 100);
+} else {
+mobileMenuOverlay.classList.add('translate-x-full', 'opacity-0', 'pointer-events-none');
+document.body.style.overflow = '';
+mobileMenuToggle.focus(); 
+}
+};
+
+if (mobileMenuToggle && mobileMenuClose && mobileMenuOverlay) {
+mobileMenuToggle.addEventListener('click', toggleMenu);
+mobileMenuClose.addEventListener('click', toggleMenu);
+mobileLinks.forEach(link => { link.addEventListener('click', () => { if (isMenuOpen) toggleMenu(); }); });
+
+document.addEventListener('keydown', (e) => { 
+    if (e.key === 'Escape' && isMenuOpen) {
+        toggleMenu(); 
+        return;
+    }
+    if (!isMenuOpen) return;
+    
+    let isTabPressed = e.key === 'Tab' || e.keyCode === 9;
+    if (!isTabPressed) return;
+    
+    if (e.shiftKey) {
+        if (document.activeElement === firstFocusableElement) {
+            lastFocusableElement.focus();
+            e.preventDefault();
+        }
+    } else {
+        if (document.activeElement === lastFocusableElement) {
+            firstFocusableElement.focus();
+            e.preventDefault();
+        }
+    }
+});
+}
+
+if (!prefersReducedMotion) {
+const videos = document.querySelectorAll('.video-slide');
+if (videos.length > 0) {
+let currentIndex = 0;
+const videoDuration = 6000;
+const playVideo = async (videoElement) => { try { videoElement.currentTime = 0; await videoElement.play(); } catch (err) {} };
+playVideo(videos[currentIndex]);
+setInterval(() => {
+videos[currentIndex].classList.remove('active');
+currentIndex = (currentIndex + 1) % videos.length;
+videos[currentIndex].classList.add('active');
+playVideo(videos[currentIndex]);
+}, videoDuration);
+}
+smoothscroll.polyfill();
+}
+
+document.querySelectorAll('a[href^="#"]:not(.mobile-link)').forEach(anchor => {
+anchor.addEventListener('click', function (e) {
+e.preventDefault();
+const targetId = this.getAttribute('href');
+const targetElement = document.querySelector(targetId);
+if (targetElement) { targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+});
+});
+
+const phoneInput = document.getElementById('phone');
+if (phoneInput) {
+phoneInput.addEventListener('input', function (e) {
+let inputNumbersValue = e.target.value.replace(/\D/g, '');
+let formattedInputValue = '';
+if (!inputNumbersValue) { return e.target.value = ''; }
+if (['7', '8', '9'].indexOf(inputNumbersValue) > -1) {
+if (inputNumbersValue === '9') inputNumbersValue = '7' + inputNumbersValue;
+formattedInputValue = e.target.value = '+7 ' + (inputNumbersValue.length > 1 ? '(' + inputNumbersValue.substring(1, 4) : '');
+if (inputNumbersValue.length >= 5) formattedInputValue += ') ' + inputNumbersValue.substring(4, 7);
+if (inputNumbersValue.length >= 8) formattedInputValue += '-' + inputNumbersValue.substring(7, 9);
+if (inputNumbersValue.length >= 10) formattedInputValue += '-' + inputNumbersValue.substring(9, 11);
+} else { formattedInputValue = '+' + inputNumbersValue.substring(0, 16); }
+e.target.value = formattedInputValue;
+});
+}
+
+const generateCSRF = () => {
+const token = crypto.getRandomValues(new Uint32Array(1)).toString(16);
+document.cookie = `csrf_token=${token}; Secure; Strict`;
+const csrfInput = document.getElementById('csrf_token');
+if(csrfInput) csrfInput.value = token;
+};
+generateCSRF();
+
+const formRateLimiter = {
+attempts: 0, lastAttempt: Date.now(),
+check: function() {
+const now = Date.now();
+if (now - this.lastAttempt > 60000) { this.attempts = 0; this.lastAttempt = now; }
+if (this.attempts >= 3) return false;
+this.attempts++; this.lastAttempt = now; return true;
+}
+};
+
+const leadForm = document.getElementById('lead-form');
+const formStatus = document.getElementById('form-status');
+if(leadForm) {
+leadForm.addEventListener('submit', async (e) => {
+e.preventDefault();
+const honeypot = leadForm.querySelector('[name="_honeypot"]').value;
+if (honeypot) return;
+if (!formRateLimiter.check()) {
+alert('Превышен лимит запросов.');
+formStatus.textContent = 'Превышен лимит запросов.';
+return;
+}
+
+const submitBtn = document.getElementById('submit-btn');
+submitBtn.disabled = true;
+formStatus.textContent = 'Отправка данных...';
+
+const formData = new FormData(leadForm);
+const payload = Object.fromEntries(formData);
+
+try {
+await new Promise(resolve => setTimeout(resolve, 800)); 
+alert('Заявка успешно отправлена. Эксперт свяжется с вами в течение 24 часов.');
+formStatus.textContent = 'Заявка успешно отправлена.';
+leadForm.reset();
+} catch (error) {
+alert('Ошибка при отправке.');
+formStatus.textContent = 'Ошибка отправки заявки.';
+} finally {
+submitBtn.disabled = false;
+}
+});
+}
+});
+
+var themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
+var themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+
+if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+themeToggleLightIcon.classList.remove('hidden');
+} else { themeToggleDarkIcon.classList.remove('hidden'); }
+
+document.getElementById('theme-toggle').addEventListener('click', function() {
+themeToggleDarkIcon.classList.toggle('hidden');
+themeToggleLightIcon.classList.toggle('hidden');
+if (localStorage.getItem('color-theme') === 'light' || (!localStorage.getItem('color-theme') && !document.documentElement.classList.contains('dark'))) {
+document.documentElement.classList.add('dark'); localStorage.setItem('color-theme', 'dark');
+} else {
+document.documentElement.classList.remove('dark'); localStorage.setItem('color-theme', 'light');
+}
+});
+</script>
+</body>
+</html>
+
